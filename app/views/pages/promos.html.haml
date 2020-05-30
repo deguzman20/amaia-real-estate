@@ -1,0 +1,12 @@
+.container
+  %br/
+  %br/
+  .row
+    .col-md-8.col-lg-8
+      - @promos.each do |promo|
+        %h3
+          = "Amaia #{promo.try(:type).try(:name)} #{promo.try(:unit).try(:specific_location)}- Promos"
+        %br/
+        = image_tag "#{promo.image}"
+    .col-md-4.col-lg-4
+      = render 'shared/list_of_projects', available_locations: @available_locations

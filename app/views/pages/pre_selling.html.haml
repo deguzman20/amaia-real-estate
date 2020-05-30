@@ -1,0 +1,48 @@
+%br/
+- @unit_types.each do |unit_type|
+  .container
+    %h2
+      = unit_type.try(:name)
+    %hr
+    .row.row-cols-md-3
+      - unit_type.units.pre_selling.each do |unit|
+        .col-md-4.col-lg-4.col-sm-6.col-xs-12
+          .col.mb-4
+            .card
+              .animationLoading
+                .view.overlay.image-loader
+                  #image-loader
+                .view-ovelay.actual-image{ style:"display:none;" }
+                  %a{:href => "/unit/#{unit.try(:id)}"}
+                    %img.card-img-top.unit-img{:alt => "Card image cap", :src => "#{unit.try(:image).url(:thumb).to_s}"}/
+                  %a{:href => "#!"}
+                    .mask.rgba-white-slight
+                .card-body
+                  %h4.card-title 
+                    = unit.try(:branch_address)
+                  .location-info-loader
+                    %p.card-text
+                      %span
+                        #specific-location-loader
+                    %hr/
+                    %p.card-text
+                      %span
+                        #location-loader
+                      %span
+                        #price-range-loader
+                      %span
+                        #unit-sizes-loader
+                  .actual-location-info
+                    %p.card-text
+                      %h5#unit-name-and-type
+                        = link_to "Amaia #{unit.type.try(:name)} #{unit.try(:specific_location)}", unit_path(unit.try(:id)), style: 'color:gray'
+                    %hr/  
+                    %p.card-text
+                      %span.location-txt
+                        = "<b>Location: </b>".html_safe + unit.try(:city).try(:name)
+                      %br/
+                      %span.price-range-txt
+                        = "<b>Price Range: </b>".html_safe + number_to_currency_peso(unit.try(:price_from)) + " to " + number_to_currency_peso(unit.try(:price_to))
+                      %br/
+                      %span.unit-sizes-txt
+                        = "<b>Unit Sizes: </b>".html_safe + unit.try(:unit_size_from) + " sqm to " + unit.try(:unit_size_to) + " sqm"

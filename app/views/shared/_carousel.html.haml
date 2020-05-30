@@ -1,0 +1,13 @@
+#carouselExampleFade.carousel.slide.carousel-fade{"data-ride" => "carousel"}
+  .carousel-inner
+    - @carousels.each do |carousel|
+      .carousel-item{ class: "#{carousel.id}" }
+        %img.d-block.w-100{alt: "First slide", src: "#{carousel.try(:image).to_s}", class: "#{carousel.try(:id)}", style: "height:500px"}/
+  %a.carousel-control-prev{"data-slide" => "prev", href: "#carouselExampleFade", role: "button"}
+    %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.carousel-control-next{"data-slide" => "next", href: "#carouselExampleFade", :role => "button"}
+    %span.carousel-control-next-icon{"aria-hidden" => "true"}
+    %span.sr-only Next
+  :javascript
+      $('.1').addClass('active')

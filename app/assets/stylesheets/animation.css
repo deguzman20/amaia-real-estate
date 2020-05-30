@@ -1,0 +1,164 @@
+
+.animationLoading{
+  background: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9;
+  border-radius: 3px; 
+  display: block;
+  padding: 0px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+#image-loader,
+#fullname-loader,
+#seller-image-loader,
+#location-loader,
+#price-range-loader,
+#unit-sizes-loader,
+#specific-location-loader {
+  position:relative;
+  background-color: #CCC;
+  height: 6px;
+  animation-name: animate; 
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;   
+  background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+  background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  -webkit-background-size: 800px 104px;  
+}
+
+#unit-name-and-type{
+  color:gray;
+}
+
+@media(min-width:300px) and (max-width:575px){
+  #image-loader {  
+    left:0; 
+    height:196.58px;
+    width:100%;  
+  }
+
+  #seller-image-loader {  
+    left:0; 
+    height:234px;
+    width:100%;  
+  }
+
+  .unit-img,
+  .seller-img {
+    height: 234px;
+  }
+}
+
+@media(min-width:576px) and (max-width:768px){
+  #image-loader {  
+    left:0; 
+    height:98.52px;
+    width:100%;  
+  }
+
+  #seller-image-loader {  
+    left:0; 
+    height:117px;
+    width:100%;  
+  }
+
+  #unit-name-and-type {
+    font-size: .9em;
+  }
+
+  .unit-img, 
+  .seller-image {
+    height: 85px;
+  }
+}
+
+@media(min-width:579px) and (max-width:991px){
+  #image-loader {  
+    left:0; 
+    height:84.31px;
+    width:100%;
+  }
+
+  #seller-image-loader {  
+    left:0; 
+    height:85px;
+    width:100%;  
+  }
+
+  .location-txt, 
+  .price-range-txt,
+  .unit-sizes-txt{
+    font-size: 10px;
+  }
+
+  .unit-img,
+  .seller-img {
+    height: 85px;
+  }
+}
+
+@media(min-width:991px) and (max-width:1199px){
+  #image-loader {  
+    left:0; 
+    height:122.2px;
+    width:100%;  
+  }
+
+  #seller-image-loader {  
+    left:0; 
+    height:145px;
+    width:100%;  
+  }
+  
+  .location-txt, 
+  .price-range-txt,
+  .unit-sizes-txt{
+    font-size: 12px;
+  }
+
+  .unit-img,
+  .seller-img {
+    height: 145px;
+  }
+}
+
+@media(min-width:1200px) and (max-width:2000px){
+  #image-loader, 
+  #seller-image-loader {  
+    left:0; 
+    height:150.63px;
+    width:100%;  
+  }
+
+  .unit-img,
+  .seller-img {
+    height: 151px;
+  }
+}
+
+#location-loader, 
+#price-range-loader, 
+#unit-sizes-loader,
+#specific-location-loader {
+  width: 100%;
+  height: .9rem;
+  margin-top: .8rem;
+}
+
+
+#fullname-loader {
+  width: 100%;
+  height: 2.0rem;
+  margin-top: .8rem; 
+}

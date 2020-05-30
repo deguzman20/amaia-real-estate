@@ -1,0 +1,42 @@
+.container
+  %br/
+  %br/
+  .row
+    .col-md-8.col-lg-8
+      .col-md-12.col-lg-12
+        %center
+          %h3
+            = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)}"
+        %hr/
+      .col-md-12.col-lg-12
+        %h4
+          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Project Concept"
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:project_concept).nil? ? '' : @unit.try(:project_concept).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Location and Vicinity"
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:location_vicinity).nil? ? '' : @unit.try(:location_vicinity).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Units and Floor Plans"
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:units_and_floor_plan).nil? ? '' : @unit.try(:units_and_floor_plan).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Amenities and Facilities"
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:amenities_and_facilities).nil? ? '' : @unit.try(:amenities_and_facilities).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Model Unit"
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:model_unit).nil? ? '' : @unit.try(:model_unit).html_safe
+    .col-md-4.col-lg-4
+      = render 'shared/list_of_projects', available_locations: @available_locations

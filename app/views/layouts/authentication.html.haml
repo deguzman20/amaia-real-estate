@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title RealEstate
+    = csrf_meta_tags
+    =# csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    / Font Awesome
+    %link{:href => "https://use.fontawesome.com/releases/v5.8.1/css/all.css", :rel => "stylesheet"}/
+    / Bootstrap core CSS
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css", :rel => "stylesheet"}/
+    / Material Design Bootstrap
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css", :rel => "stylesheet"}/
+    / CSS
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css", :rel => "stylesheet"}/
+    / Default theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.min.css", :rel => "stylesheet"}/
+    / Semantic UI theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.min.css", :rel => "stylesheet"}/
+    / Bootstrap theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.min.css", :rel => "stylesheet"}/
+    /
+      RTL version
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.rtl.min.css", :rel => "stylesheet"}/
+    / Default theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.rtl.min.css", :rel => "stylesheet"}/
+    / Semantic UI theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.rtl.min.css", :rel => "stylesheet"}/
+    / Bootstrap theme
+    %link{:href => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.rtl.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://unpkg.com/aos@2.3.1/dist/aos.css", :rel => "stylesheet"}/
+    / JQuery
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", :type => "text/javascript"}
+    / Client Side Validation
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js", :type => "text/javascript"}
+    / Bootstrap tooltips
+  %body{ :style => "background-color:#f9f9f7" }
+    = yield
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js", :type => "text/javascript"}
+    %script{:src => "//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js", :type => "text/javascript"}
+    %script{:defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyA6EoPjoxYiQOrqoOe1QlC598jxwSMkWrU&callback=initialize", :type => "text/javascript"}
+    %script{:src => "https://unpkg.com/aos@2.3.1/dist/aos.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" }
+= javascript_include_tag 'loader', 'data-turbolinks-track': 'reload'
+

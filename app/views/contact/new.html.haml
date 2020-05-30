@@ -1,0 +1,56 @@
+.container
+  .row
+    .col-md-12.col-lg-12
+      = form_for :inquiry, builder: ContactFormBuilder, novalidate: true do |f| 
+        %section.contact-section.my-5
+          .card
+            .row
+              .col-lg-9.col-md-9
+                .card-body.form
+                  %p.mt-4
+                    Thank you for your interest in Amaia Land! For inquiries, sample quotations, 
+                    prices, promos, site viewing schedules and unit reservations, 
+                    kindly fill out this form and we'll get back to you immediately:          
+                  .row
+                    = f.text_field :guest_name
+                    = f.text_field :email
+                  .row
+                    = f.text_field :contact_number
+                    = f.text_field :address
+                  .row
+                    .col-md-6.col-lg-6
+                      = f.select :unit_id, options_for_select(@units.map{|c| ["Amaia #{c.try(:type).try(:name)} #{c.try(:specific_location)}", c.id]}, f.object), {prompt: 'Select Unit'}, {class: 'form-control selectpicker', name: 'unit' }
+                  .row
+                    .col-md-12.col-lg-12
+                      %br/
+                      %textarea#form-contact-message.form-control.md-textarea{rows: '3', name: 'message', placeholder: 'Message...'}
+                  %br/
+                  = f.submit 'Send', class: 'btn-floating btn-lg white-text btn-black'
+              .col-lg-3.col-md-3
+                .card-body.contact.text-center.h-100.white-text{ style: 'background-color:gray' }
+                  %h3.my-4.pb-2 Contact information
+                  %ul.text-lg-left.list-unstyled.ml-4
+                    %li
+                      %p
+                        %i.fas.fa-phone.pr-2>
+                        +63) 916-928-5197 
+                    %li
+                      %p
+                        %i.fas.fa-phone.pr-2>
+                        (+63) 927-955-6616
+                    %li
+                      %p
+                        %i.fas.fa-envelope.pr-2>
+                        sales@amaia.com.ph
+                  %hr.hr-light.my-4/
+                  %ul.list-inline.text-center.list-unstyled
+                    %li.list-inline-item
+                      %a.p-2.fa-lg.tw-ic
+                        %i.fab.fa-twitter
+                    %li.list-inline-item
+                      %a.p-2.fa-lg.li-ic
+                        %i.fab.fa-linkedin-in
+                    %li.list-inline-item
+                      %a.p-2.fa-lg.ins-ic
+                        %i.fab.fa-instagram
+= javascript_include_tag 'contact', 'data-turbolinks-track': 'reload'
