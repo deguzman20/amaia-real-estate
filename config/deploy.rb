@@ -23,6 +23,16 @@ namespace :deploy do
         info "Created relative current symlink"
     end
   end
+
+  task :update_image do
+  	#execute ""
+		on roles(:app) do
+			#execute "ln -s #{current_path}/public/uploads #{shared_path}/public/uploads"
+			previous = capture("ls -Ct #{releases_path} | awk '{print $2}'").to_s.strip
+			execute "cp -R #{releases_path}/#{previous}/public/uploads #{current_path}/public"
+
+		end
+	end
 end
 
 
@@ -31,7 +41,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 
 after :deploy, "deploy:create_symlink"
-
+after 'deploy', 'uploads:update_image'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
