@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: amaia-real-estate_production
-  username: amaia-real-estate
+  username: root
   password: root
