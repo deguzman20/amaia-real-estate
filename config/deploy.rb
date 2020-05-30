@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.0"
 
-set :application, "amaia"
+set :application, "amaia-real-estate"
 set :repo_url, "git@github.com:deguzman20/amaia-real-estate.git"
 
 set :use_sudo, false
