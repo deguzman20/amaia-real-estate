@@ -19,7 +19,7 @@ namespace :deploy do
         execute "rm -d #{current_path}"
 
         info "Deleted current symlink"
-        execute "cd /home/amaia/public_html/amaia && ln -s /home/amaia/public_html/amaia/releases/#{File.basename release_path} current"
+        execute "cd /home/deploy/public_html/amaia-real-estate && ln -s /home/deploy/public_html/amaia-real-estate/releases/#{File.basename release_path} current"
         info "Created relative current symlink"
     end
   end
