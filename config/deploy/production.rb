@@ -2,7 +2,7 @@ server "159.89.167.205", user: "deploy", roles: %w[app db web]
 # , password: fetch(:password)
 set :state, :production
 set :branch, "master"
-set :rails_env, :development
+set :rails_env, :production
 
 # server-based syntax
 # ======================
