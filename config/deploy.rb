@@ -23,6 +23,10 @@ namespace :deploy do
         info "Created relative current symlink"
     end
   end
+
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{sudo} service nginx #{command}"
+  end
 end
 
 namespace :uploads do
