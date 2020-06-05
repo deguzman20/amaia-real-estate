@@ -42,15 +42,10 @@
 }
 
 @media(min-width:300px) and (max-width:575px){
-  #image-loader {  
-    left:0; 
-    height:196.58px;
-    width:100%;  
-  }
-
+  #image-loader,
   #seller-image-loader {  
     left:0; 
-    height:234px;
+    height:260px;
     width:100%;  
   }
 
@@ -61,15 +56,10 @@
 }
 
 @media(min-width:576px) and (max-width:768px){
-  #image-loader {  
-    left:0; 
-    height:98.52px;
-    width:100%;  
-  }
-
+  #image-loader,
   #seller-image-loader {  
     left:0; 
-    height:117px;
+    height:120px;
     width:100%;  
   }
 
@@ -79,21 +69,16 @@
 
   .unit-img, 
   .seller-image {
-    height: 85px;
+    height: 120px;
   }
 }
 
 @media(min-width:579px) and (max-width:991px){
-  #image-loader {  
-    left:0; 
-    height:84.31px;
-    width:100%;
-  }
-
+  #image-loader,
   #seller-image-loader {  
     left:0; 
-    height:120px;
-    width:100%;  
+    height: 120px;
+    width:100%;
   }
 
   .location-txt, 
@@ -113,18 +98,13 @@
 }
 
 @media(min-width:991px) and (max-width:1199px){
-  #image-loader {  
+  #image-loader,
+  #seller-image-loader {  
     left:0; 
-    height:122.2px;
+    height:150px;
     width:100%;  
   }
 
-  #seller-image-loader {  
-    left:0; 
-    height:145px;
-    width:100%;  
-  }
-  
   .location-txt, 
   .price-range-txt,
   .unit-sizes-txt{
@@ -133,7 +113,7 @@
 
   .unit-img,
   .seller-img {
-    height: 145px;
+    height: 150px;
   }
   .actual-fullname {
     font-size: 15px;
