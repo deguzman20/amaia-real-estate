@@ -10,7 +10,7 @@ UnitType.create([
                     name: "Townhouse"
                   }
                 ])
-puts "Successfully seeded cities table... Proceeding..."
+puts "Successfully seeded unit type table... Proceeding..."
 # else
 #   puts "City table has already been seeded... Proceeding..."
 # end
