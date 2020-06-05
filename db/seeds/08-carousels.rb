@@ -18,3 +18,4 @@ image_list = [
   carousel = Carousel.new(attributes)
   carousel.save(validate: false)
 end
+puts "Successfully seeded carousels table... Proceeding..."

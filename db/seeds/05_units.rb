@@ -140,3 +140,4 @@ image_list = [
   u = Unit.new(attributes)
   u.save(validate: false)
 end
+puts "Successfully seeded units table... Proceeding..."

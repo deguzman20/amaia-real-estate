@@ -62,3 +62,5 @@ image_list = [
   seller = Seller.new(attributes)
   seller.save(validate: false)
 end
+
+puts "Successfully seeded sellers table... Proceeding..."

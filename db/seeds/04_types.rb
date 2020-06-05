@@ -4,3 +4,4 @@ Type.create([
               { name: "Skies" },
               { name: "Steps" }
             ])
+puts "Successfully seeded type table... Proceeding..."
