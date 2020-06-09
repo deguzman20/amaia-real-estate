@@ -15,3 +15,7 @@
  *= require contact.css
  *= require animation.css
  */
+
+ .active {
+   background-color: #e6e2e2;
+ }
