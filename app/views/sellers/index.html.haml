@@ -8,22 +8,40 @@
   %br/
   .row
     - @sellers.each do |seller|
-      .col-md-4.col-lg-4.col-sm-6.col-xs-12
+      .col-md-12.col-lg-12.col-sm-12.col-xs-12
         .col.mb-4
           .card
-            .animationLoading
-              .view.overlay.image-loader
-                #seller-image-loader
-              .view-ovelay.actual-image{ style:"display:none;" }
-                %img.card-img-top.seller-img{:alt => "Card image cap", :src => "#{seller.try(:image).url(:thumb).to_s}"}/
-                %a{:href => "#!"}
-                  .mask.rgba-white-slight
-              .card-body
-                %center
-                  %hr/
-                  %h4.actual-fullname.card-title
-                    = seller_fullname(seller)
-                .fullname-loader
-                  %p.card-text
-                    %span
-                      #fullname-loader
+            .row
+              .col-lg-4.col-md-4.col-sm-6
+                .view-ovelay
+                  %img.card-img-top.seller-img{:alt => "Card image cap", :src => "#{seller.try(:image).url(:thumb).to_s}"}/
+                  %a{:href => "#!"}
+                    .mask.rgba-white-slight
+              .col-lg-8-col-md-4.col-sm-6
+                .container
+                  .row
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
+                      %h3
+                        = seller_fullname(seller)
+                      %hr/
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
+                      %strong
+                        Position:
+                      = seller_position(seller)
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
+                      %strong
+                        PRC:
+                      = seller_prc(seller)
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
+                      %strong
+                        HLURB:
+                      = seller_hlurb(seller)
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
+                      = seller_fb_link(seller)
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      %br/
