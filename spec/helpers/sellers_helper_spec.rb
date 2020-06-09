@@ -15,5 +15,21 @@ RSpec.describe SellersHelper, type: :helper do
     it "returns the value of seller_fullname method" do
       expect(helper.seller_fullname(create(:seller))).to eql("Alejandro Gacuma De guzman")
     end
+
+    it "returns the value of seller_position method" do
+      expect(helper.seller_position(create(:seller))).to eql("Seller")
+    end
+
+    it "returns the value of seller_prc method" do
+      expect(helper.seller_prc(create(:seller))).to eql("prc")
+    end
+
+    it "returns the value of seller_hlurb method" do
+      expect(helper.seller_hlurb(create(:seller))).to eql("hlurb")
+    end
+
+    it "returns the value of seller_fb_link method" do
+      expect(helper.seller_fb_link(create(:seller))).to eql("facebook.com/andy.dangas")
+    end
   end
 end
