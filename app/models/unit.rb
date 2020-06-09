@@ -34,9 +34,10 @@ class Unit < ApplicationRecord
   has_many :inquiries, dependent: :destroy
 
   validates :specific_location, :unit_type_id, :city_id, :price_from, :price_to,
-            :image, :unit_size_from, :unit_size_to, :project_concept, :location_and_vicinity,
-            :site_development_plan, :units_and_floor_plan,
-            :amenities_and_facilities, :model_unit, :type_id, presence: true
+            :image, :unit_size_from, :unit_size_to, presence: true 
+            # :project_concept, :location_and_vicinity,
+            # :site_development_plan, :units_and_floor_plan,
+            # :amenities_and_facilities, :model_unit, :type_id, presence: true
 
   scope :pre_selling, -> { where(pre_selling: true) }
   scope :ready_for_occupancy, -> { where(ready_for_occupancy: true) }
