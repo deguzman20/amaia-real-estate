@@ -1,7 +1,7 @@
 image_list = [
   Rails.root + "app/assets/images/slide1.jpg",
   Rails.root + "app/assets/images/slide2.jpg",
-  Rails.root + "app/assets/images/slide3.jpg",
+  Rails.root + "app/assets/images/slide3.jpg"
 ]
 
 [
