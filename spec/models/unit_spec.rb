@@ -43,12 +43,12 @@ RSpec.describe Unit, type: :model do
     it { is_expected.to validate_presence_of(:image) }
     it { is_expected.to validate_presence_of(:unit_size_from) }
     it { is_expected.to validate_presence_of(:unit_size_to) }
-    it { is_expected.to validate_presence_of(:project_concept) }
-    it { is_expected.to validate_presence_of(:location_and_vicinity) }
-    it { is_expected.to validate_presence_of(:site_development_plan) }
-    it { is_expected.to validate_presence_of(:units_and_floor_plan) }
-    it { is_expected.to validate_presence_of(:amenities_and_facilities) }
-    it { is_expected.to validate_presence_of(:model_unit) }
-    it { is_expected.to validate_presence_of(:type_id) }
+    # it { is_expected.to validate_presence_of(:project_concept) }
+    # it { is_expected.to validate_presence_of(:location_and_vicinity) }
+    # it { is_expected.to validate_presence_of(:site_development_plan) }
+    # it { is_expected.to validate_presence_of(:units_and_floor_plan) }
+    # it { is_expected.to validate_presence_of(:amenities_and_facilities) }
+    # it { is_expected.to validate_presence_of(:model_unit) }
+    # it { is_expected.to validate_presence_of(:type_id) }
   end
 end
