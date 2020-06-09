@@ -9,41 +9,36 @@ set :stage, :development
 set :deploy_to, "/home/deploy/public_html/amaia-real-estate"
 
 namespace :deploy do
-
   desc "Change HTML Symlink to relative path"
   task :create_symlink do
     on roles(:app) do
+      # execute "ls -l"
+      info "Modifying symlink to be relative"
+      execute "rm -d #{current_path}"
 
-        #execute "ls -l"
-        info "Modifying symlink to be relative"
-        execute "rm -d #{current_path}"
-
-        info "Deleted current symlink"
-        execute "cd /home/deploy/public_html/amaia-real-estate && ln -s /home/deploy/public_html/amaia-real-estate/releases/#{File.basename release_path} current"
-        info "Created relative current symlink"
+      info "Deleted current symlink"
+      execute "cd /home/deploy/public_html/amaia-real-estate && ln -s /home/deploy/public_html/amaia-real-estate/releases/#{File.basename release_path} current"
+      info "Created relative current symlink"
     end
   end
 end
 
 namespace :uploads do
   task :update_image do
-    #execute ""
+    # execute ""
     on roles(:app) do
-      #execute "ln -s #{current_path}/public/uploads #{shared_path}/public/uploads"
+      # execute "ln -s #{current_path}/public/uploads #{shared_path}/public/uploads"
       previous = capture("ls -Ct #{releases_path} | awk '{print $2}'").to_s.strip
       execute "cp -R #{releases_path}/#{previous}/public/uploads #{current_path}/public"
-
     end
   end
 end
 
-
 append :linked_files, "config/database.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
-
 after :deploy, "deploy:create_symlink"
-after 'deploy', 'uploads:update_image'
+after "deploy", "uploads:update_image"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
