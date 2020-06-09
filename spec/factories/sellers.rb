@@ -15,6 +15,10 @@ FactoryBot.define do
     first_name { "Alejandro" }
     middle_name { "Gacuma" }
     last_name { "De guzman" }
+    position { "Seller" }
+    prc { "prc" }
+    hlrb { "hlurb" }
+    fb_link { "facebook.com/andy.dangas" }
     image { File.open("app/assets/images/condo-8.jpg") }
   end
 end
