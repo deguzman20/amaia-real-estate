@@ -19,7 +19,7 @@
           = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Location and Vicinity"
       .col-md-12.col-lg-12
         %br/
-        = @unit.try(:location_vicinity).nil? ? '' : @unit.try(:location_vicinity).html_safe
+        = @unit.try(:location_and_vicinity).nil? ? '' : @unit.try(:location_and_vicinity).html_safe
       .col-md-12.col-lg-12
         %h4
           = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Units and Floor Plans"
