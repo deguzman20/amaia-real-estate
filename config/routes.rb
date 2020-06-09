@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   }
   root "pages#home"
   get "/check_credential", to: "pages#credential"
-  get "/about", to: "pages#about_us"
   get "/promos", to: "pages#promos"
+
+  get "/about", to: "pages#about_us"
   get "/ready_for_occupancy", to: "pages#ready_for_occupancy"
   get "/pre_selling", to: "pages#pre_selling"
   get "/unit/:id", to: "pages#unit", as: :unit
