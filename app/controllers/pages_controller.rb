@@ -8,7 +8,7 @@
 #     - unit = action for specific unit
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :available_locations, on: %i[about_us promo]
+  before_action :available_locations, on: %i[about_us promos]
   before_action :unit_types, on: %i[home pre_selling ready_for_occupancy]
 
   def home
