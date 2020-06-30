@@ -8,6 +8,8 @@ set :use_sudo, false
 set :stage, :development
 set :deploy_to, "/home/deploy/public_html/amaia-real-estate"
 
+ssh_options[:forward_agent] = true
+
 namespace :deploy do
   desc "Change HTML Symlink to relative path"
   task :create_symlink do

@@ -1,4 +1,4 @@
-server "159.89.167.205", user: "deploy", roles: %w[app db web]
+server "54.169.229.246", user: "deploy", roles: %w[app db web]
 # , password: fetch(:password)
 set :state, :production
 set :branch, "master"
