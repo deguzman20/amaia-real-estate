@@ -37,7 +37,7 @@ image_list = [
   {
     first_name: "Jobelle",
     middle_name: "",
-    last_name: "Muñoz",
+    last_name: "Munoz",
     image: File.open(image_list[4])
   },
   {
