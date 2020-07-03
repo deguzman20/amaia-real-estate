@@ -1,22 +1,22 @@
 %nav.navbar.navbar-expand-lg.navbar-dark
   %a.navbar-brand{:href => "#"}
-    = image_tag 'logo.png', width: 50
+    = image_tag 'logo.png', width: 100
   %button.navbar-toggler{"aria-controls" => "navbarText", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarText", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarText.collapse.navbar-collapse
     %ul.navbar-nav.mr-auto
       %li.nav-item{ class: "#{current_page('home')}" }
-        = link_to "List of projects", root_path, class: "nav-link", style: 'color:black'
+        = link_to "LIST OF PROJECTS", root_path, class: "nav-link", style: 'color:black'
       %li.nav-item{ class: "#{current_page('about_us')}" }
-        = link_to "About us", about_path, class: 'nav-link', style: 'color:black'
+        = link_to "ABOUT US", about_path, class: 'nav-link', style: 'color:black'
       %li.nav-item{ class: "#{current_page('pre_selling')}" }
-        = link_to "Pre selling", pre_selling_path, class: 'nav-link', style: 'color:black'
+        = link_to "PRE SELLING", pre_selling_path, class: 'nav-link', style: 'color:black'
       %li.nav-item{ class: "#{current_page('ready_for_occupancy')}" }
-        = link_to "Ready for occupancy", ready_for_occupancy_path, class: 'nav-link', style: 'color:black'
+        = link_to "READY FOR OCCUPANCY", ready_for_occupancy_path, class: 'nav-link', style: 'color:black'
       %li.nav-item{ class: "#{current_page('promos')}" }
-        = link_to "Promos", promos_path, class: "nav-link", style: 'color:black'
+        = link_to "PROMOS", promos_path, class: "nav-link", style: 'color:black'
       %li.nav-item{ class: "#{current_page('new')}" }
-        = link_to "Contact Us", new_contact_path, class: 'nav-link', style: 'color:black'
+        = link_to "CONTACT US", new_contact_path, class: 'nav-link', style: 'color:black'
       %li.nav-item{ class: "#{current_page('index')}" }
-        = link_to "Sellers", sellers_path, class: 'nav-link', style: 'color:black'
+        = link_to "SELLERS", sellers_path, class: 'nav-link', style: 'color:black'
       

@@ -10,31 +10,31 @@
         %hr/
       .col-md-12.col-lg-12
         %h4
-          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Project Concept"
+          Project Concept
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:project_concept).nil? ? '' : @unit.try(:project_concept).html_safe
       .col-md-12.col-lg-12
         %h4
-          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Location and Vicinity"
+          Location and Vicinity
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:location_and_vicinity).nil? ? '' : @unit.try(:location_and_vicinity).html_safe
       .col-md-12.col-lg-12
         %h4
-          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Units and Floor Plans"
+          Units and Floor Plans
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:units_and_floor_plan).nil? ? '' : @unit.try(:units_and_floor_plan).html_safe
       .col-md-12.col-lg-12
         %h4
-          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Amenities and Facilities"
+          Amenities and Facilities
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:amenities_and_facilities).nil? ? '' : @unit.try(:amenities_and_facilities).html_safe
       .col-md-12.col-lg-12
         %h4
-          = "Amaia #{@unit.try(:type).try(:name)} #{@unit.try(:specific_location)} - Model Unit"
+          Model Unit
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:model_unit).nil? ? '' : @unit.try(:model_unit).html_safe
