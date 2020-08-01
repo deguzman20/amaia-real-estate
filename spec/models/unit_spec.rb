@@ -32,6 +32,7 @@ RSpec.describe Unit, type: :model do
     it { is_expected.to belong_to(:type).optional(true) }
     it { is_expected.to have_many(:promos) }
     it { is_expected.to have_many(:inquiries).dependent(:destroy) }
+    it { is_expected.to have_many(:unit_galleries).dependent(:destroy) }
   end
 
   describe "Validations" do
