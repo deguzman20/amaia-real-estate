@@ -2,7 +2,7 @@
   %br/
   %br/
   .row
-    .col-md-8.col-lg-8
+    .col-md-6.col-lg-6
       .col-md-12.col-lg-12
         %center
           %h3
@@ -38,5 +38,7 @@
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:model_unit).nil? ? '' : @unit.try(:model_unit).html_safe
-    .col-md-3.col-lg-3
+    .col-md-4.col-lg4-4
+      = render 'shared/image_galleries', image_galleries: @unit.image_galleries
+    .col-md-2.col-lg-2
       = render 'shared/list_of_projects', available_locations: @available_locations
