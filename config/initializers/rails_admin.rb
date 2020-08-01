@@ -83,6 +83,11 @@ RailsAdmin.config do |config|
       end
     end
     field :image
+    field :specific_location
+    field :price_from
+    field :price_to
+    field :unit_size_from
+    field :unit_size_to
   end
 
   config.actions do
