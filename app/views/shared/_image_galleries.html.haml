@@ -1,0 +1,8 @@
+.row
+  .col-md-12.col-l2
+    #mdb-lightbox-ui
+    .mdb-lightbox
+      - image_galleries.each do |ig|
+        %figure.col-md-12
+          %a{"data-size" => "1600x1067", :href => "#{ig.try(:image).url(:thumb).to_s}"}
+            %img.img-fluid{:alt => "picture", :src => "#{ig.try(:image).url(:thumb).to_s}"}/
