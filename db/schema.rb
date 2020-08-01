@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200801064347) do
+ActiveRecord::Schema.define(version: 20200801121201) do
 
   create_table "carousels", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "image"
@@ -55,6 +55,11 @@ ActiveRecord::Schema.define(version: 20200801064347) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "specific_location"
+    t.string "price_from"
+    t.string "price_to"
+    t.string "unit_size_from"
+    t.string "unit_size_to"
   end
 
   create_table "sellers", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
