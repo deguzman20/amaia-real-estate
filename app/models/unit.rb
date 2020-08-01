@@ -25,10 +25,14 @@
 #
 class Unit < ApplicationRecord
   mount_uploader :image, UnitUploader
+  
 
   belongs_to :unit_type, optional: true
   belongs_to :city, optional: true
   belongs_to :type, optional: true
+  
+  has_many :image_galleries
+  accepts_nested_attributes_for :image_galleries
 
   has_many :promos
   has_many :inquiries, dependent: :destroy
