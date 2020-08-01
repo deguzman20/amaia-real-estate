@@ -53,6 +53,7 @@ RailsAdmin.config do |config|
     field :price_from
     field :price_to
     field :image
+    field :image_galleries
     field :pre_selling
     field :ready_for_occupancy
     field :unit_size_from
@@ -63,6 +64,16 @@ RailsAdmin.config do |config|
     field :units_and_floor_plan, :ck_editor
     field :amenities_and_facilities, :ck_editor
     field :model_unit, :ck_editor
+  end
+
+  config.model ImageGallery do
+    visible :false
+    field :unit_id, :enum do
+      enum do
+        Unit.all.map { |v| ["Amaia #{v.type.name} #{v.specific_location}", v.id] }
+      end
+    end
+    field :image
   end
 
   config.model Promo do
