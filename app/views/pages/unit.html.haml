@@ -38,6 +38,12 @@
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:model_unit).nil? ? '' : @unit.try(:model_unit).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          FAQ's
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:faq).nil? ? '' : @unit.try(:faq).html_safe
     .col-md-4.col-lg4-4
       = render 'shared/image_galleries', image_galleries: @unit.image_galleries
     .col-md-2.col-lg-2
