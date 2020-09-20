@@ -39,7 +39,7 @@ FactoryBot.define do
     image { File.open("app/assets/images/condo-8.jpg") }
     pre_selling { false }
     ready_for_occupancy { false }
-    site_development_plan { "<h1>Site Development</h1>" }
+    faq { "<h1>Faq</h1>" }
     units_and_floor_plan { "<h1>Units and floor</h1>" }
     type_id { 1 }
   end
