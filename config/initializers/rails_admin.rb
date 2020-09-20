@@ -60,7 +60,7 @@ RailsAdmin.config do |config|
     field :unit_size_to
     field :project_concept, :ck_editor
     field :location_and_vicinity, :ck_editor
-    field :site_development_plan, :ck_editor
+    field :faq, :ck_editor
     field :units_and_floor_plan, :ck_editor
     field :amenities_and_facilities, :ck_editor
     field :model_unit, :ck_editor
