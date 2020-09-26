@@ -22,12 +22,6 @@
         = @unit.try(:location_and_vicinity).nil? ? '' : @unit.try(:location_and_vicinity).html_safe
       .col-md-12.col-lg-12
         %h4
-          Units and Floor Plans
-      .col-md-12.col-lg-12
-        %br/
-        = @unit.try(:units_and_floor_plan).nil? ? '' : @unit.try(:units_and_floor_plan).html_safe
-      .col-md-12.col-lg-12
-        %h4
           Amenities and Facilities
       .col-md-12.col-lg-12
         %br/
@@ -38,6 +32,12 @@
       .col-md-12.col-lg-12
         %br/
         = @unit.try(:model_unit).nil? ? '' : @unit.try(:model_unit).html_safe
+      .col-md-12.col-lg-12
+        %h4
+          Units and Floor Plans
+      .col-md-12.col-lg-12
+        %br/
+        = @unit.try(:units_and_floor_plan).nil? ? '' : @unit.try(:units_and_floor_plan).html_safe
       .col-md-12.col-lg-12
         %h4
           FAQ's
